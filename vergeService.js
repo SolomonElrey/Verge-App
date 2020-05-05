@@ -56,8 +56,6 @@ async function checkIfUserDoesNotExistBefore(email) {
         text: queries.findBlogByEmail,
         values: [email],
     };
-    console.log(email);
-    console.log(queries.findBlogByEmail);
     try {
         const { rowCount } = await db.query(queryObject);
         if (rowCount == 0) {
