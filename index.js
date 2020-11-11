@@ -7,7 +7,7 @@ let port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.listen(port, () => {
-    console.log('Application Listening on port 3000')
+    console.log(`Application Listening on port ${port}`)
 });
 
 app.get('/', (req, res) => {
